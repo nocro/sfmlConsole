@@ -16,5 +16,10 @@ if(UNIX)
 	include_directories("/home/ubuntu/Documents/bibliotheque")
 	target_link_libraries(sfmlConsole "-lsfml-graphics -lsfml-window -lsfml-system")
 endif(UNIX)
+if(WIN32)
+
+
+endif(WIN32)
+	
 
 
