@@ -17,7 +17,8 @@ if(UNIX)
 	target_link_libraries(sfmlConsole "-lsfml-graphics -lsfml-window -lsfml-system")
 endif(UNIX)
 if(WIN32)
-
+	include_directories("C:/bibliotheque/SFML-2.4.2/include")
+	target_link_libraries(sfmlConsole C:/bibliotheque/SFML-2.4.2/include/lib/lsfml-graphics.lib C:/bibliotheque/SFML-2.4.2/include/lib/lsfml-window.lib C:/bibliotheque/SFML-2.4.2/include/lib/lsfml-system.lib)
 
 endif(WIN32)
 	
