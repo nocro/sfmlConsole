@@ -25,7 +25,6 @@ Console::Console(): text_out("",font), text_in("",font), last_string_printed(0)
     }
     window.create(modes[activated_mode],"loup garou");
     
-
     console_params param_mode;
     param_mode.window_size = window.getSize();
     param_mode.tapping_zone_size = sf::Vector2f(param_mode.window_size.x, param_mode.window_size.y/27);
@@ -50,6 +49,7 @@ Console::Console(): text_out("",font), text_in("",font), last_string_printed(0)
 
     text_in.setFillColor(param_mode.text_in_color);
     text_in.setOrigin(param_mode.tapping_zone_origin);
+
     text_out.setFillColor(param_mode.text_out_color);
 
     modes_param.push_back(param_mode);
@@ -86,8 +86,8 @@ void Console::draw()
 
     text_out.setString(toprint);
   
-    window.draw(text_out);
     window.draw(tapping_zone);
+    window.draw(text_out);
     window.draw(text_in);
     window.draw(scroling_bar);
 }
