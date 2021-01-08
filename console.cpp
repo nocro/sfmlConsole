@@ -77,14 +77,15 @@ void Console::draw()
 {
     window.clear();
     
-    std::string toprint=" ";
+    std::string toprint="";
     auto m = std::max(0,static_cast<int>(last_string_printed-27));
     for(long unsigned int i= m; i<last_string_printed; i++ )
     {
         toprint += out[i] +"\n";
     }
-    std::cout << " caca : " << toprint.size() << std::endl;
+
     text_out.setString(toprint);
+  
     window.draw(text_out);
     window.draw(tapping_zone);
     window.draw(text_in);

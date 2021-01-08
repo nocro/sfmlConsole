@@ -18,8 +18,10 @@ if(UNIX)
 endif(UNIX)
 if(WIN32)
 	include_directories("C:/bibliotheque/SFML-2.4.2/include")
-	target_link_libraries(sfmlConsole C:/bibliotheque/SFML-2.4.2/include/lib/lsfml-graphics.lib C:/bibliotheque/SFML-2.4.2/include/lib/lsfml-window.lib C:/bibliotheque/SFML-2.4.2/include/lib/lsfml-system.lib)
-
+	set (EXTRA_LIBS ${EXTRA_LIBS} "C:/bibliotheque/SFML-2.4.2/lib/sfml-system-d.lib")
+	set (EXTRA_LIBS ${EXTRA_LIBS} "C:/bibliotheque/SFML-2.4.2/lib/sfml-window-d.lib")
+	set (EXTRA_LIBS ${EXTRA_LIBS} "C:/bibliotheque/SFML-2.4.2/lib/sfml-graphics-d.lib")
+	target_link_libraries (sfmlConsole  ${EXTRA_LIBS})
 endif(WIN32)
 	
 
